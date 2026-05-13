@@ -154,8 +154,8 @@
   <script>
     function setLang(lang) {
       document.documentElement.lang = lang;
-      document.querySelectorAll('[data-ja]').forEach(el => el.style.display = lang === 'ja' ? '' : 'none');
-      document.querySelectorAll('[data-en]').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+      document.querySelectorAll('[data-ja]').forEach(el => el.style.display = lang === 'ja' ? 'revert' : 'none');
+      document.querySelectorAll('[data-en]').forEach(el => el.style.display = lang === 'en' ? 'revert' : 'none');
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
       document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
     }
